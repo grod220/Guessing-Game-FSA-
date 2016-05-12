@@ -3,24 +3,34 @@
 
 <head>
   <title>The Original Guessing Game</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/430cd8e5f3.css">
   <link href='css/bootstrap.css' rel='stylesheet'>
+  <link href='css/main.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 </head>
 <body>
   <div class='container'>
+  
+  
+    <div class='row text-center webtitle bigblue'>
       <div class='col-sm-12'>
-        <h1>Here we go</h1>
+        <span class='headerf'> <i class="fa fa-magic" aria-hidden="true"></i>The Original Guessing Game</span>
       </div>  
-      <div class='col-sm-4 col-sm-offset-2'>
+    </div>
+    
+      <div class='col-sm-4 col-sm-offset-2 guessbox well'>
         <h2>Input your best guess</h2>
-        <p>After you input, it's forever. No turning back.</p>
+        <p class='lead'>After you input, it's forever. No turning back.</p>
         <form>form elements</form>
-        <button type='button'>Submit guess</button>
-        <button type='button'>Play Again</button>
-        <button type='button'>Hint please</button>
+        <button type='button' class='btn-lg btn-primary'>Submit guess</button>
+        <button type='button' class='btn-sm'>Play Again</button>
+        <button type='button' class='btn-sm'>Hint please</button>
       </div> 
       
-      <div class='col-sm-3 col-sm-offset-1'>
+      <div class='col-sm-3 col-sm-offset-1 statusbox well'>
         <h3>5 guesses remaining</h3>
+                <i class='glyphicon glyphicon-hourglass'></i>
+
       </div>
   </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
