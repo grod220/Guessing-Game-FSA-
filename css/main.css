@@ -1,5 +1,11 @@
-.statusbox, .guessbox {
-  margin-top:-90px;
+.guessbox {
+  margin-top: -20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .statusbox, .guessbox {
+    margin-top:-90px;
+  }  
 }
 
 .statusbox .glyphicon {
@@ -16,7 +22,7 @@
 }
 
 .bigblue .headerf {
-  padding-top: 100px;
+  padding-top: 10px;
   font-size: 60px;
   color:white;
   font-family: 'Lobster', cursive;
