@@ -7,9 +7,20 @@
     margin-top:-90px;
   }  
 }
+.hinter {
+  color: blue;
+}
 
 .statusbox .glyphicon {
   font-size: 100px;
+}
+
+.failure {
+  color:red;
+}
+
+.success {
+  color:green;
 }
 
 .webtitle {

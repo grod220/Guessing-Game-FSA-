@@ -6,7 +6,11 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/430cd8e5f3.css">
   <link href='css/bootstrap.css' rel='stylesheet'>
   <link href='css/main.css' rel='stylesheet'>
-<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="js/guessingGame.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+  
 </head>
 <body>
   <div class='container-fluid'>
@@ -24,18 +28,54 @@
             <form class="guesstext">
               <input type="text">
             </form>        
-        <button type='button' class='btn-lg btn-primary'>Submit guess</button>
-        <button type='button' class='btn-sm'>Play Again</button>
-        <button type='button' class='btn-sm'>Hint please</button>
+        <button type='button' class='btn-lg btn-primary submit'>Submit guess</button>
+        <button type='button' class='btn-sm again'>Play Again</button>
+        <button type='button' class='btn-sm hint'>Hint please</button>
       </div> 
       
       <div class='col-sm-3 col-sm-offset-1 statusbox well text-center'>
-        <h3>5 guesses remaining</h3>
+        <h3 id="resultsbox"><span id='guessesleft'>5</span> guesses remaining</h3>
                 <i class='glyphicon glyphicon-hourglass'></i>
-
+        <p class="guesshelper"> </p>
       </div>
   </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  
+  
+  <script>
+    $(document).ready(function() { 
+      whatsLeft = +$('#guessesleft').text();
+      
+      // preventdefault
+      
+      //hit enter key... clickSubmit();
+      $('.guesstext').on('submit', function(event) {
+        event.preventDefault();
+        clickSubmit();});
+      
+      // $('.guesstext').keypress(function (e) {
+      // if (e.which == 13) {
+      // $('.text').submit();
+      // return false;    
+      // }
+      // });
+      
+      $('.submit').on('click', function() {
+        clickSubmit();
+      });
+      
+      $('.hint').on('click', function() {
+        provideHint();
+      });
+      
+      $('.again').on('click', function() {
+        playAgain();
+      });
+      
+      
+    });
+  </script>
+  
+  
 <script src='js/bootstrap.js'></script>
 </body>
 </html>
